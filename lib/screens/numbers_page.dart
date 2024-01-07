@@ -5,6 +5,15 @@ class NumberPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Color(0xffFEF6DB),
+      appBar: AppBar(
+        backgroundColor: Color(0xff46322B),
+        title: Text('Tker'),
+      ),
+      body: Column(
+        children: [],
+      ),
+    );
   }
 }
