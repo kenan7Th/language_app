@@ -20,7 +20,7 @@ class ListItem extends StatelessWidget {
         children: [
           Container(
             color: const Color(0xffFFF6DC),
-            child: Image.asset(number.image),
+            child: Image.asset(number.image!),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16.0),

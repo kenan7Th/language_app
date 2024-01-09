@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:teachinglangauesapp/screens/colors_page.dart';
 import 'package:teachinglangauesapp/screens/family_members_page.dart';
 import 'package:teachinglangauesapp/screens/numbers_page.dart';
+import 'package:teachinglangauesapp/screens/phrases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -47,14 +49,28 @@ class HomePage extends StatelessWidget {
             text: 'Colors',
             color: const Color(0xff79359F),
             onTap: () {
-              print('my colors');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return ColorsPage();
+                  },
+                ),
+              );
             },
           ),
           Category(
             text: 'Phrases',
             color: const Color(0x50ADC7),
             onTap: () {
-              print('phrases');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return PharsesPage();
+                  },
+                ),
+              );
             },
           ),
         ],
