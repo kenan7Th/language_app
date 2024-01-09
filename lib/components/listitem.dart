@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
-import 'package:teachinglangauesapp/models/Number.dart';
+import 'package:teachinglangauesapp/models/Item.dart';
 
-class Item extends StatelessWidget {
-  const Item({super.key, required this.number});
-  final Number number;
-
+class ListItem extends StatelessWidget {
+  const ListItem(
+      {super.key,
+      required this.number,
+      required this.mycolor,
+      required this.itemType});
+  final Item number;
+  final Color mycolor;
+  final String itemType;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Color(0xffEF9235),
+      color: mycolor,
       child: Row(
         children: [
           Container(
@@ -41,10 +46,13 @@ class Item extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(right: 18.0),
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 30,
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 28,
+              ),
             ),
           ),
         ],

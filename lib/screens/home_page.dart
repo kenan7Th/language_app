@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teachinglangauesapp/screens/family_members_page.dart';
 import 'package:teachinglangauesapp/screens/numbers_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,7 +33,14 @@ class HomePage extends StatelessWidget {
             text: 'FamilyMember',
             color: const Color(0xff558B37),
             onTap: () {
-              print('family Member');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return FamilyMebersPage();
+                  },
+                ),
+              );
             },
           ),
           Category(
